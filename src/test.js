@@ -1,3 +1,10 @@
+//import './index.js'
+
+// chai предоставляет большое количество функций. Объявим assert глобально
+let assert = chai.assert;
+
+
+
 describe("pow", function () {
 
 	describe("возводит x в степень 3", function () {
@@ -20,7 +27,7 @@ describe("pow", function () {
 		for (let x = 0; x <= 5; x++) {
 			for (let n = 0; n <= 5; n++) {
 				let expected = 1;
-				for (i = 1; i <= n; i++) {
+				for (let i = 1; i <= n; i++) {
 					expected *= x;
 				}
 				it(`${x} в степени ${n} будет ${expected}`, function () {
@@ -40,3 +47,7 @@ describe("pow", function () {
 	});
 
 });
+
+
+// запускаем тесты! 
+mocha.run();

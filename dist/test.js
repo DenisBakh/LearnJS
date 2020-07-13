@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./test.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
+/***/ "./test.js":
+/*!*****************!*\
+  !*** ./test.js ***!
+  \*****************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./index.js?");
+eval("//import './index.js'\r\n\r\n// chai предоставляет большое количество функций. Объявим assert глобально\r\nlet assert = chai.assert;\r\n\r\n\r\n\r\ndescribe(\"pow\", function () {\r\n\r\n\tdescribe(\"возводит x в степень 3\", function () {\r\n\r\n\t\tfor (let x = 1; x <= 5; x++) {\r\n\t\t\tmakeTest(x);\r\n\t\t}\r\n\r\n\t\tfunction makeTest(x) {\r\n\t\t\tlet expected = x * x * x;\r\n\t\t\tit(`${x} в степени 3 будет ${expected}`, function () {\r\n\t\t\t\tassert.equal(pow(x, 3), expected);\r\n\t\t\t});\r\n\t\t}\r\n\r\n\t});\r\n\r\n\tdescribe(\"возвоздит x в степень n\", function () {\r\n\r\n\t\tfor (let x = 0; x <= 5; x++) {\r\n\t\t\tfor (let n = 0; n <= 5; n++) {\r\n\t\t\t\tlet expected = 1;\r\n\t\t\t\tfor (let i = 1; i <= n; i++) {\r\n\t\t\t\t\texpected *= x;\r\n\t\t\t\t}\r\n\t\t\t\tit(`${x} в степени ${n} будет ${expected}`, function () {\r\n\t\t\t\t\tassert.equal(pow(x, n), expected)\r\n\t\t\t\t});\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t});\r\n\r\n\tit(\"если n - отрицательное число, результат будет NaN\", function () {\r\n\t\tassert.isNaN(pow(2, -1));\r\n\t});\r\n\r\n\tit(\"если n не число, результат будет NaN\", function () {\r\n\t\tassert.isNaN(pow(2, 1.5));\r\n\t});\r\n\r\n});\r\n\r\n\r\n// запускаем тесты! \r\nmocha.run();\n\n//# sourceURL=webpack:///./test.js?");
 
 /***/ })
 

@@ -1,50 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<!-- добавим стили mocha для отображения результатов -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
-	<!-- добавляем сам фреймворк mocha -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
-	<script>
-		// включаем режим тестирования в стиле BDD
-		mocha.setup('bdd');
-	</script>
-	<!-- добавим chai -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
-	<script>
-		// chai предоставляет большое количество функций. Объявим assert глобально
-		let assert = chai.assert;
-	</script>
-</head>
-
 <body>
 
-	<script>
-		function pow(x, n) {
-			if (n < 0) return NaN;
-			if (Math.round(n) != n) return NaN;
+	<div id="mocha">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat unde odit fuga eveniet harum. Tenetur illum
+		soluta aperiam a, impedit nemo aliquid, dicta fugiat enim officia voluptatibus tempore iste ullam?
+	</div>
 
-			let result = 1;
-
-			for (let i = 0; i < n; i++) {
-				result *= x;
-			}
-
-			return result;
-		}
-	</script>
-
-	<!-- скрипт со спецификацией (describe, it...) -->
-	<script src="test.js"></script>
-
-	<!-- элемент с id="mocha" будет содержать результаты тестов -->
-	<div id="mocha"></div>
-
-	<!-- запускаем тесты! -->
-	<script>
-		mocha.run();
-	</script>
 </body>
 
 </html>

@@ -6,15 +6,22 @@ module.exports = {
 	context: path.resolve(__dirname, 'src'), // исходники по умолчанию
 	mode: 'development',
 	entry: {
-		main: './index.js',
+		test: './test.js',
+		index: './index.js',
 	},
 	output: {
-		filename: '[name].[hash].js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './index.html'
+			filename: './index.html',
+			template: './index.html',
+			chunks: ['index']
+		}),
+		new HtmlWebpackPlugin({
+			filename: './test.html',
+			template: './test.html'
 		}),
 		new CleanWebpackPlugin()
 	]
