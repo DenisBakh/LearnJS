@@ -10,7 +10,7 @@ module.exports = {
 		index: './index.js',
 	},
 	output: {
-		filename: '[name].js',
+		filename: '[name].[hash].js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	plugins: [
